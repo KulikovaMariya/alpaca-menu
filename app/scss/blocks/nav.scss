@@ -1,0 +1,115 @@
+.nav {
+  height: 100%;
+
+  &__menu {
+    height: 100%;
+    margin: 0 -20px;
+    list-style-type: none;
+    display: flex;
+  }
+
+  &__menu-item {
+    position: relative;
+    margin: 0 20px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    font: 18px/24px $basic-family;
+    font-weight: 400;
+    color: #FAFAFA;
+  }
+
+  &__link:hover {
+    color: $red;
+  }
+
+  &__submenu {
+    width: 320px;
+    list-style-type: none;
+    position: absolute;
+  }
+
+  &__submenu-item {
+    position: relative;
+    padding: 5.5px 16px;
+    background: #252830;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__submenu-link {
+    display: inline-block;
+    width: 100%;
+    font: 16px/24px $basic-family;
+    font-weight: 400;
+    color: #FAFAFA;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__submenu-link:hover {
+    color: $red;
+  }
+}
+
+//vertical submenu
+
+.nav__submenu--vertical {
+  display: none;
+  top: 100%;
+  left: 0;
+}
+
+.nav__menu-item:nth-child(2):hover .nav__submenu--vertical {
+  display: block;
+}
+
+.nav__submenu--vertical::before {
+  content: '';
+  height: 26px;
+  width: 26px;
+  border: 13px solid transparent;
+  position: absolute;
+  border-bottom: 13px solid #252830;
+  top: -26px;
+  left: 47px;
+}
+
+.nav__submenu--vertical .nav__submenu-item:last-child {
+   border-bottom: none;
+   border-radius: 0 0 8px 8px;
+ }
+
+//horizontal submenu
+
+.nav__submenu--horizontal {
+  display: none;
+  width: 180px;
+  right: -200px;
+  bottom: 0;
+}
+
+.nav__submenu--vertical .nav__submenu-item:last-child:hover .nav__submenu--horizontal  {
+  display: block;
+}
+
+.nav__submenu--horizontal::before {
+  content: '';
+  height: 26px;
+  width: 26px;
+  border: 13px solid transparent;
+  position: absolute;
+  border-right: 13px solid #252830;
+  bottom: 10px;
+  left: -26px;
+}
+
+.nav__submenu--horizontal .nav__submenu-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
