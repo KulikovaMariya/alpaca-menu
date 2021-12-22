@@ -1,6 +1,9 @@
 .main {
   height: 100%;
-  width: 100%;
-  background: url('../img/alpaca-background.jpg');
-  //object-fit: cover;
+  max-width: 1440px;
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
 }

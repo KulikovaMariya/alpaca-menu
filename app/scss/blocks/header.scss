@@ -1,11 +1,13 @@
 .header {
+  z-index: 2;
   height: 80px;
+  max-width: 1440px;
   padding: 0 122px;
-  background-color: $header-bg;
+  background-color: $bg;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 4px 4px rgba(19, 20, 23, 0.4);
+  box-shadow: 0 4px 4px rgba(19, 20, 23, 0.4);
 
   &__logo {
     height: 46px;
