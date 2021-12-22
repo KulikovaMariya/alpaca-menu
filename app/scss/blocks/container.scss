@@ -1,7 +1,7 @@
 .container {
+  max-width: 1644px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 0 122px;
+  margin: 0 auto;
   background: $bg;
-  align-items: center;
 }
