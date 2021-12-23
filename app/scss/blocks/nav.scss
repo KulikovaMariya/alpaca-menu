@@ -1,5 +1,8 @@
-.nav {
+.header__nav {
   height: 100%;
+}
+
+.nav {
 
   &__menu {
     height: 100%;
@@ -11,10 +14,9 @@
   &__menu-item {
     position: relative;
     margin: 0 10px;
-    padding: 8px 28px;
   }
 
-  &__menu-item:nth-child(2)::after {
+  &__menu-item--arrow::after {
      content: '';
      height: 8px;
      width: 8px;
@@ -26,12 +28,13 @@
      transition: 0.3s;
    }
 
-  &__menu-item:nth-child(2):hover::after {
+  &__menu-item--arrow:hover::after {
     top: 50%;
     transform: scale(-1);
   }
 
   &__link {
+    padding: 8px 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +116,7 @@
    border-bottom: none;
  }
 
-.nav__submenu--vertical > .nav__submenu-item:last-child::after {
+.nav__submenu--vertical > .nav__submenu-item--arrow::after {
   content: '';
   height: 8px;
   width: 8px;
@@ -125,7 +128,7 @@
   transition: 0.3s;
 }
 
-.nav__submenu--vertical > .nav__submenu-item:last-child:hover::after {
+.nav__submenu--vertical > .nav__submenu-item--arrow:hover::after {
   right: 8px;
   transform: scale(-1);
 }
