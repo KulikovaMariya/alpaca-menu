@@ -1,13 +1,14 @@
 .header {
-  z-index: 2;
-  min-height: 80px;
-  max-width: 100%;
-  padding: 0 122px;
   background-color: $bg;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
   box-shadow: 0 4px 4px rgba(19, 20, 23, 0.4);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__logo {
     height: 46px;
@@ -16,7 +17,7 @@
     border: 4px solid #2D9CDB;
     display: flex;
     justify-content: center;
-
+    flex-shrink: 0;
   }
 
   &__logo-icon {
@@ -46,3 +47,9 @@
     color: $white;
   }
 }
+
+//@media (max-width: 768px){
+//  .header {
+//    padding: 0 22px;
+//  }
+//}

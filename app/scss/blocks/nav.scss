@@ -3,7 +3,6 @@
 }
 
 .nav {
-
   &__menu {
     height: 100%;
     margin: 0 -20px;
@@ -18,19 +17,18 @@
 
   &__menu-item--arrow::after {
      content: '';
-     height: 8px;
-     width: 8px;
+     margin-top: -3px;
      border: 6px solid transparent;
-     border-bottom-color: #F2994A;
+     border-top-color: #F2994A;
+     border-bottom: 0;
      position: absolute;
-     top: 40%;
+     top: 50%;
      right: 0;
-     transition: 0.3s;
+     transition: transform 0.3s ease;
    }
 
   &__menu-item--arrow:hover::after {
-    top: 50%;
-    transform: scale(-1);
+    transform: rotate(-180deg);
   }
 
   &__link {
@@ -92,64 +90,89 @@
 //vertical submenu
 
 .nav__submenu--vertical {
-  display: none;
-  top: 100%;
+  opacity: 0;
+  top: calc(100% + 20px);
   left: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
 }
 
-.nav__menu-item:nth-child(2):hover > .nav__submenu--vertical {
-  display: block;
+.nav__submenu--vertical::after {
+  content: '';
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+}
+
+.nav__menu-item--arrow:hover > .nav__submenu--vertical {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .nav__submenu--vertical::before {
   content: '';
-  height: 26px;
-  width: 26px;
   border: 13px solid transparent;
   position: absolute;
   border-bottom: 13px solid #252830;
-  top: -26px;
-  left: 47px;
+  bottom: 100%;
+  left: 15%;
 }
 
 .nav__submenu--vertical > .nav__submenu-item:last-child {
    border-bottom: none;
  }
 
+.nav__submenu--vertical > .nav__submenu-item--arrow {
+  padding-right: 13px;
+}
+
 .nav__submenu--vertical > .nav__submenu-item--arrow::after {
   content: '';
-  height: 8px;
-  width: 8px;
+  margin-top: -6px;
   border: 6px solid transparent;
-  border-right-color: #F2994A;
+  border-left-color: #F2994A;
   position: absolute;
-  top: 13px;
-  right: 15px;
-  transition: 0.3s;
+  top: 50%;
+  right: 12px;
+  transition: transform .3s ease;
 }
 
 .nav__submenu--vertical > .nav__submenu-item--arrow:hover::after {
-  right: 8px;
-  transform: scale(-1);
+  transform: rotate(-180deg);
 }
 
 //horizontal submenu
 
 .nav__submenu--horizontal {
-  display: none;
+  opacity: 0;
   width: 180px;
   left: 105%;
   bottom: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
 }
 
-.nav__submenu--vertical > .nav__submenu-item:last-child:hover > .nav__submenu--horizontal  {
-  display: block;
+.nav__submenu--horizontal::after  {
+  content: '';
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+}
+
+.nav__submenu-item--arrow:hover > .nav__submenu--horizontal  {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
 }
 
 .nav__submenu--horizontal::before {
   content: '';
-  height: 26px;
-  width: 26px;
   border: 13px solid transparent;
   position: absolute;
   border-right: 13px solid #252830;

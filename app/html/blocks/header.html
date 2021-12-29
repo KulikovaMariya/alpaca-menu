@@ -1,16 +1,18 @@
 <header class="header">
-  <a href="#" class="header__logo">
-    <svg class="header__logo-icon">
-      <use xlink:href="img/svg/sprite.svg#logo"></use>
-    </svg>
-  </a>
-  @@include('nav.html')
-  <a href="tel:+1321222333333" class="header__link">
-    <svg class="header__tel-icon">
-      <use xlink:href="img/svg/sprite.svg#tel"></use>
-    </svg>
-    <span class="header__tel-number">
+  <div class="header__container container">
+    <a href="#" class="header__logo">
+      <svg role="img" aria-label="Логотип сайта" class="header__logo-icon">
+        <use xlink:href="img/svg/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    @@include('nav.html')
+    <a href="tel:+1321222333333" class="header__link">
+      <svg class="header__tel-icon">
+        <use xlink:href="img/svg/sprite.svg#tel"></use>
+      </svg>
+      <span class="header__tel-number">
       +1 (321) 222 - 33 - 33
     </span>
-  </a>
+    </a>
+  </div>
 </header>
