@@ -13,6 +13,11 @@
   &__menu-item {
     position: relative;
     margin: 0 10px;
+
+    @include bp-1 {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &__menu-item--arrow::after {

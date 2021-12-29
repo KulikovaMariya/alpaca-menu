@@ -1,0 +1,11 @@
+@mixin bp-1 {
+  @media (max-width: $bp-1){
+    @content;
+  }
+}
+
+@mixin bp-2 {
+  @media (max-width: $bp-1){
+    @content;
+  }
+}
