@@ -48,5 +48,32 @@
     @include bp-2 {
       display: none;
     }
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 22px;
+    height: 12px;
+    background-color: $bg;
+    border-top: 2px solid #F2994A;
+    border-bottom: 2px solid #F2994A;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__burger-line {
+    height: 2px;
+    width: 100%;
+    background-color: #F2994A;
+    margin: auto;
   }
 }
