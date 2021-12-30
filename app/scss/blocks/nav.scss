@@ -4,10 +4,7 @@
 
 .nav {
  @include tablet {
-   position: absolute;
-   top: 82px;
-   right: -100%;
-   bottom: 0;
+   display: none;
  }
 
   &__menu {
@@ -201,6 +198,7 @@
 
 .nav--active {
   @include tablet {
+    display: flex;
     position: absolute;
     top: 82px;
     right: 0;
