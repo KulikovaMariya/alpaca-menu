@@ -53,6 +53,10 @@
     @include tablet {
       display: inline-block;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__burger {
