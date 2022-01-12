@@ -32,6 +32,9 @@
     padding: 8px;
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      margin-left: auto;
+    }
   }
 
   &__tel-icon {

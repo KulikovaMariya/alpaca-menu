@@ -1,17 +1,37 @@
-.header__nav {
-
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .nav {
- @include tablet {
-   display: none;
- }
+  transition: transform .2s, opacity .2s;
+   @include tablet {
+     transform: translateX(100%);
+     opacity: 0;
+     pointer-events: none;
+     position: fixed;
+     top: 82px;
+     right: 0;
+     bottom: 0;
+     background-color: $bg;
+     overflow-y: auto;
+     &--active{
+       transform: translateX(0);
+       opacity: 1;
+       pointer-events: auto;
+     }
+   }
 
   &__menu {
     margin: 0 -20px;
     list-style-type: none;
     display: flex;
-
+    @include tablet {
+      display: block;
+    }
   }
 
   &__menu-item {
@@ -34,6 +54,9 @@
      top: 50%;
      right: 0;
      transition: transform 0.3s ease;
+    @include tablet {
+      display: none;
+    }
    }
 
   &__menu-item--arrow:hover::after {
@@ -161,6 +184,9 @@
   transform: translateX(10px);
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
+  @include tablet {
+    transform: translateX(0);
+  }
 }
 
 .nav__submenu--third::after  {
@@ -193,17 +219,6 @@
 
 //tablet
 
-.nav--active {
-  @include tablet {
-    display: flex;
-    position: absolute;
-    top: 82px;
-    right: 0;
-    bottom: 0;
-    background-color: $bg;
-  }
-}
-
 .nav--active::after {
   @include tablet {
     content: '';
@@ -221,7 +236,6 @@
   @include tablet {
     flex-direction: column;
     margin: 0;
-    overflow-y: auto;
   }
 }
 
