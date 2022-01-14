@@ -74,9 +74,9 @@
 
   &__link {
     padding: 8px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    //align-items: center;
+    //justify-content: center;
     text-decoration: none;
     font: 18px/24px $basic-family;
     font-weight: 400;
@@ -229,7 +229,7 @@
 //tablet
 .nav--active .nav__menu {
   @include tablet {
-    flex-direction: column;
+    //flex-direction: column;
     margin: 0;
   }
 }
@@ -269,12 +269,12 @@
   border-radius: 0;
 }
 
-.nav--active .nav__link {
-  @include tablet {
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-}
+//.nav--active .nav__link {
+//  @include tablet {
+//    justify-content: flex-start;
+//    align-items: flex-start;
+//  }
+//}
 
 .nav--active .nav__link,
 .nav--active .nav__submenu-link {

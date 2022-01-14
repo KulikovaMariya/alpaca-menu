@@ -23,7 +23,7 @@
 }
 
 @mixin hover {
-  @media (min-width: $tablet + 1) {
+  @media (min-width: $desktop) {
     @content
   }
 }
