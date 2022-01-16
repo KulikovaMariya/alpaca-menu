@@ -66,17 +66,16 @@
 
   &__burger {
     display: none;
-    width: 22px;
-    height: 12px;
+    width: 52px;
+    height: 42px;
+    padding: 15px;
     background-color: $bg;
-    border-top: 2px solid #F2994A;
-    border-bottom: 2px solid #F2994A;
-    border-left: 0;
-    border-right: 0;
+    border: 0;
     cursor: pointer;
 
     @include tablet {
       display: flex;
+      flex-direction: column;
     }
   }
 
