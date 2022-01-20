@@ -32,7 +32,7 @@
 
      &--active .nav__menu-item,
      &--active .nav__submenu-item {
-       padding: 10px 0;
+       padding: 0;
        border-top: 0;
        border-bottom: 1px solid $bg;
      }
@@ -54,7 +54,6 @@
        opacity: 0;
        height: 0;
        width: 100%;
-       margin-top: 10px;
        pointer-events: none;
        transition: opacity .2s ease, height .2s ease;
      }
@@ -77,8 +76,9 @@
 
      &--active .nav__link,
      &--active .nav__submenu-link {
-       padding-left: 20px;
-       padding-right: 20px;
+       padding: 20px 20px;
+       width: 100%;
+       white-space: normal;
      }
 
      &--active .nav__menu-item--arrow > .nav__link,
@@ -165,6 +165,7 @@
     font: 18px/24px $basic-family;
     font-weight: 400;
     color: #FAFAFA;
+    white-space: nowrap;
   }
 
   &__submenu {

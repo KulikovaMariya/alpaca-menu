@@ -50,6 +50,7 @@
     font: 18px/24px $basic-family;
     font-weight: 500;
     color: $white;
+    white-space: nowrap;
 
     @include bp-2 {
       display: none;
