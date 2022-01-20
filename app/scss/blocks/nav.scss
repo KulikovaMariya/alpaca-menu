@@ -43,7 +43,8 @@
 
      &--active .nav__submenu-item,
      &--active .nav__submenu-item:first-child,
-     &--active .nav__submenu-item:last-child {
+     &--active .nav__submenu-item:last-child,
+     &--active .nav__submenu--third .nav__submenu-item:first-child {
        border-radius: 0;
      }
 
