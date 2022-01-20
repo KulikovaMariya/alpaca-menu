@@ -43,7 +43,6 @@
     height: 24px;
     width: 24px;
     color: $green;
-    margin-right: 10px;
   }
 
   &__tel-number {
@@ -51,6 +50,7 @@
     font-weight: 500;
     color: $white;
     white-space: nowrap;
+    margin-left: 10px;
 
     @include bp-2 {
       display: none;
@@ -67,9 +67,10 @@
 
   &__burger {
     display: none;
-    width: 52px;
+    width: 46px;
     height: 42px;
-    padding: 15px;
+    padding: 12px;
+    margin-left: 8px;
     background-color: $bg;
     border: 0;
     cursor: pointer;
