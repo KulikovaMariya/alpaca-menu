@@ -58,6 +58,11 @@
        transition: opacity .2s ease, height .2s ease;
      }
 
+     &--active .nav__menu-item--arrow:hover ,
+     &--active .nav__submenu-item--arrow:hover {
+       background-color: $bg;
+     }
+
      &--active .nav__menu-item--arrow:hover .nav__submenu--second,
      &--active .nav__submenu-item--arrow:hover > .nav__submenu--third {
        opacity: 1;
@@ -89,13 +94,10 @@
      &--active .nav__menu-item--arrow > .nav__link::after,
      &--active .nav__submenu-item--arrow > .nav__submenu-link::after {
        content: '';
-       margin-top: -3px;
+       display: inline-block;
        border: 6px solid transparent;
        border-top-color: #F2994A;
        border-bottom: 0;
-       position: absolute;
-       top: 50%;
-       right: 0;
        transition: transform 0.3s ease;
      }
 
